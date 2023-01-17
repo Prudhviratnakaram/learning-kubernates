@@ -23,10 +23,12 @@ module "minikube" {
 }
 
 variable "HOSTED_ZONE" {}
-required_providers {
-  aws = {
-    source  = "hashicorp/aws"
-    version = "3.74.0"
+terraform {
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = "3.74.0"
+    }
   }
 }
 provider "aws" {
