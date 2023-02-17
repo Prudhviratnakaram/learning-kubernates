@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: Deployment
+  labels:
+    app: redis
+    type: messenger
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: redis
+  template:
+    metadata:
+      name: redis
+      labels:
+        app: redis
+        type: messenger
+    spec:
+      containers:
+        - name: redis
+          image: redis
