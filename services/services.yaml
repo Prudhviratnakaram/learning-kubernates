@@ -9,7 +9,6 @@ spec:
       port: 80
       nodePort: 30008
   selector:
-    labels:
       app: nginx
       type: frontend
 
