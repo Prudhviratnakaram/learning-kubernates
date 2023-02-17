@@ -5,16 +5,13 @@ metadata:
 spec:
   replicas: 3
   selector:
-    matchLabels:
-    app: frontend server
+    app: nginx
   template:
     metadata:
-      name: sample02
-      labels: frontend server
+      name: nginx
+      labels:
+        app: nginx
     spec:
-      template:
       containers:
-        - name: sample1
+        - name: nginx
           image: nginx
-
-
