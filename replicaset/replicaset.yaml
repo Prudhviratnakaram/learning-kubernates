@@ -10,6 +10,7 @@ spec:
   selector:
     matchLabels:
     app: redis
+    type: messenger
   template:
     metadata:
       name: redis
