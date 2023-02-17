@@ -2,9 +2,15 @@ apiVersion: apps/v1
 kind: ReplicaSet
 metadata:
   name: redis
-  type: messenger
+  labels:
+    app: redis
+    type: messenger
 spec:
   replicas: 3
+  selector:
+    matchLabels:
+    app: redis
+    type: messenger
   template:
     metadata:
       name: redis
@@ -15,6 +21,3 @@ spec:
       containers:
         - name: redis
           image: redis
-  selector:
-  matchLabels:
-  type: messenger
