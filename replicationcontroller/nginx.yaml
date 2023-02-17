@@ -1,0 +1,10 @@
+kind: pod
+apiVersion: v1
+metadata:
+  name: sample02
+  labels: frontend server
+spec:
+  template:
+  containers:
+    - name: sample1
+      image: nginx
